@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iRs-0P-UEX"/>
+                        <viewControllerLayoutGuide type="bottom" id="RV3-5A-H7r"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NLW-2c-5NE" customClass="BBHoldToSpeakButton">
+                                <rect key="frame" x="30" y="517" width="315" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="pzN-9d-ELm"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uvj-Ku-0fZ">
+                                <rect key="frame" x="30" y="587" width="315" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="rft-pr-zbu"/>
+                                </constraints>
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="playBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="coS-Vb-VnO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="NLW-2c-5NE" firstAttribute="bottom" secondItem="Uvj-Ku-0fZ" secondAttribute="top" constant="-20" id="7u7-D8-BGL"/>
+                            <constraint firstItem="NLW-2c-5NE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="30" id="H8W-QZ-ejz"/>
+                            <constraint firstItem="Uvj-Ku-0fZ" firstAttribute="centerX" secondItem="NLW-2c-5NE" secondAttribute="centerX" id="NL7-Iw-Ate"/>
+                            <constraint firstItem="RV3-5A-H7r" firstAttribute="top" secondItem="NLW-2c-5NE" secondAttribute="bottom" constant="100" id="SiZ-WV-BdZ"/>
+                            <constraint firstItem="NLW-2c-5NE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hrB-Kk-NBO"/>
+                            <constraint firstItem="Uvj-Ku-0fZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="30" id="x5L-Vf-sD3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnRecord" destination="NLW-2c-5NE" id="NpZ-C2-ksX"/>
+                        <outlet property="playBtn" destination="Uvj-Ku-0fZ" id="nCF-bg-0Yv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="126.81159420289856" y="102.12053571428571"/>
+        </scene>
+    </scenes>
+</document>
